@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<div class="bg-light opacity-75 w-50 text-center rounded" style="margin: 0 auto;">
+				<h1 class="d-flex justify-content-center mt-5 opacity-100" >¡Welcome to the library!</h1>
+			</div>
+			<nav class="d-flex justify-content-center mt-4">
+				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">NEW BOOK</button>
+			</nav>
+		</header>
+		<div class="container mt-4 p-3 text-center d-flex flex-wrap justify-content-center" id="cardContainer">
+		</div>
+
+		<!-- modal -->
+		<div class="modal" id="formModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title">Create a new book</h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true"></span>
+				  </button>
+				</div>
+				<div class="modal-body">
+					<form class="text-center" id="form">
+						<div class="row">
+							<div class="col-md-6 mt-2">
+								<label for="authorLabel">Author</label>
+								<input required type="text" class="form-control" id="author">
+							</div>
+							<div class="col-md-6 mt-2">
+								<label for="titleLabel">Title</label>
+								<input required type="text" class="form-control" id="title">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mt-2">
+								<label for="pagesLabel">Number of pages</label>
+								<input required type="number" class="form-control" id="numPages">
+							</div>
+							<div class="col-md-6 mt-2">
+								<label for="readLabel">Read status</label>
+								<select required class="form-select" id="status" aria-label="read status select">
+									<option disabled hidden>elige opción</option>
+									<option value="1">read</option>
+									<option value="2">unread</option>
+								</select>
+							</div>
+						</div>
+						<button id ="submitBtn" class="btn btn-primary mt-4 w-50">Submit</button>
+					</form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
